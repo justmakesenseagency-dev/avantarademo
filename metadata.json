@@ -1,0 +1,6 @@
+{
+  "name": "Avantaara",
+  "description": "Avantaara Experiences and Avantaara Events — Modern, high-end event planning and curated gatherings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --color-warm-ivory: #F5F0E8;
+  --color-soft-beige: #E7DDCD;
+  --color-espresso: #29251F;
+  --color-muted-olive: #7A8065;
+  --color-terracotta: #B9785B;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration, 40s) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration, 40s) linear infinite;
+}
+
+:root {
+  color-scheme: light;
+  --background: #F5F0E8;
+  --foreground: #29251F;
+  --card: #FAF7F2;
+  --card-foreground: #29251F;
+  --border: #E7DDCD;
+  --muted: #EFE9DE;
+  --muted-foreground: #736E65;
+  --secondary: #EFE9DE;
+  --secondary-foreground: #29251F;
+}
+
+body {
+  background-color: #F5F0E8;
+  color: #29251F;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F0E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #E7DDCD;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7A8065;
+}
