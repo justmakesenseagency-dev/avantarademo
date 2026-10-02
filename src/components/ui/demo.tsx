@@ -147,4 +147,8 @@ export function DemoOne({ className }: { className?: string } = {}) {
 }
 
 export { DemoOne as Testimonials };
+export { default as HeroSectionwithPixelBackground } from "@/components/ui/hero-with-pixelbackground";
+export { default as HeroWithPixelBackgroundDemo } from "@/components/ui/hero-with-pixelbackground-demo";
+export { default as Hero10Example } from "@/components/ui/hero-10-demo";
+export { Hero10 } from "@/components/ui/hero-10";
 export default DemoOne;

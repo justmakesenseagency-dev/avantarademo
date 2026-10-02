@@ -6,8 +6,6 @@ import { ChoiceLanding } from './components/ChoiceLanding';
 import { ExperiencesView } from './components/ExperiencesView';
 import { EventsView } from './components/EventsView';
 import { ConsultationModal } from './components/ConsultationModal';
-import { BRAND_INFO } from './data/content';
-import { Phone, MessageCircle } from 'lucide-react';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<ViewMode>(() => {
@@ -100,7 +98,7 @@ export default function App() {
       />
 
       {/* Main View Area */}
-      <main className="flex-1 pb-16 sm:pb-0">
+      <main className="flex-1">
         {currentView === 'landing' && (
           <ChoiceLanding
             onSelectChoice={(choice) => handleNavigate(choice)}
@@ -121,26 +119,6 @@ export default function App() {
           />
         )}
       </main>
-
-      {/* Bottom Sticky Mobile Contact Bar */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#F5F0E8]/95 backdrop-blur-md border-t border-[#E7DDCD] px-4 py-2.5 flex items-center justify-between gap-3 shadow-lg">
-        <a
-          href={`tel:${BRAND_INFO.phoneRaw}`}
-          className="flex-1 py-2 px-3 bg-white border border-[#E7DDCD] rounded-sm text-center text-xs font-semibold text-[#29251F] flex items-center justify-center gap-1.5"
-        >
-          <Phone className="w-3.5 h-3.5 text-[#B9785B]" />
-          <span>Call Us</span>
-        </a>
-        <a
-          href={BRAND_INFO.whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 py-2 px-3 bg-[#29251F] text-[#F5F0E8] rounded-sm text-center text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1.5"
-        >
-          <MessageCircle className="w-3.5 h-3.5 text-[#7A8065]" />
-          <span>WhatsApp</span>
-        </a>
-      </div>
 
       {/* Footer */}
       <Footer onNavigate={handleNavigate} />
